@@ -1,25 +1,26 @@
-mult_3 = 0
-mult_5 = 0
 total = 0
-x = []
-y = []
 
-for temp in (0..999)
-
-	if temp%3 == 0
-		x.push(temp)
-		mult_3 = mult_3 + temp
-	
-	
-	elsif temp%5 == 0
-		y.push(temp)
-		mult_5 = mult_5 + temp
+(0..999).each do |n|
+	if (n % 3 == 0) || (n % 5 == 0)
+    total += n
 	end
-	
 end	
 
-total = mult_3 + mult_5
-
-puts "Sum of multiples of 3 and 5 under 1000 are:"
 puts total
+
+
+
+a = (1..10).to_a
+b = a
+a.map { |x| x.to_s + "!!"} 
+p a
+p b
+
+a.map! { |x| x * 2} 
+p a
+p b
+
+a.select { |x| x % 3 == 0 }
+
+%w(binoy naveen).map {|x| x.upcase }
 
